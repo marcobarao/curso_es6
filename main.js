@@ -1,26 +1,18 @@
-class List {
-  constructor() {
-    this.list = [];
-  }
+// const texto = "Olá";
+// texto = "Não dá para reatribuir em const";
 
-  add(elem) {
-    this.list.push(elem);
-    return this;
-  }
+const teste = { texto: "Olá" };
+teste.texto = "Porém uma const é mutável";
 
-  get() {
-    return this.list;
+console.log(teste.texto);
+
+function test(x) {
+  let y = 2;
+
+  if (y == 2) {
+    console.log(x, y);
   }
 }
 
-class TodoList extends List {
-  constructor() {
-    super();
-  }
-  static oQueEuSou() {
-    return "Eu sou uma lista de afazeres";
-  }
-}
-
-console.log(new TodoList().add("algumacoisa").get());
-console.log(TodoList.oQueEuSou());
+// console.log(y); // Não dá pois nossa váriavel está atribuida em outro escopo
+test(10);
