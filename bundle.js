@@ -1,20 +1,19 @@
 "use strict";
 
-// const texto = "Olá";
-// texto = "Não dá para reatribuir em const";
-var teste = {
-  texto: "Olá"
-};
-teste.texto = "Porém uma const é mutável";
-console.log(teste.texto);
-
-function test(x) {
-  var y = 2;
-
-  if (y == 2) {
-    console.log(x, y);
-  }
-} // console.log(y); // Não dá pois nossa váriavel está atribuida em outro escopo
-
-
-test(10);
+var arr = [1, 3, 4, 6, 7, 9, 11, 15, 16];
+var map = arr.map(function (item) {
+  return item * 2;
+});
+console.log(map);
+var reduce = arr.reduce(function (total, item) {
+  return total += item;
+});
+console.log(reduce);
+var filter = arr.filter(function (item) {
+  return item % 2 == 0;
+});
+console.log(filter);
+var find = arr.find(function (item) {
+  return item === 4;
+});
+console.log(find);

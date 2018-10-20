@@ -1,18 +1,25 @@
-// const texto = "Olá";
-// texto = "Não dá para reatribuir em const";
+const arr = [1, 3, 4, 6, 7, 9, 11, 15, 16];
 
-const teste = { texto: "Olá" };
-teste.texto = "Porém uma const é mutável";
+const map = arr.map(function(item) {
+  return item * 2;
+});
 
-console.log(teste.texto);
+console.log(map);
 
-function test(x) {
-  let y = 2;
+const reduce = arr.reduce(function(total, item) {
+  return (total += item);
+});
 
-  if (y == 2) {
-    console.log(x, y);
-  }
-}
+console.log(reduce);
 
-// console.log(y); // Não dá pois nossa váriavel está atribuida em outro escopo
-test(10);
+const filter = arr.filter(function(item) {
+  return item % 2 == 0;
+});
+
+console.log(filter);
+
+const find = arr.find(function(item) {
+  return item === 4;
+});
+
+console.log(find);
