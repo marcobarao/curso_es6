@@ -1,13 +1,4 @@
-const arr = [1, 2, 4, 5, 6];
+const soma = (a = 3, b = 6) => a + b;
 
-const newArr = arr.map(item => item * 2);
-
-console.log(newArr);
-
-// const test = () => {
-//   return { nome: "Marco" };
-// };
-
-const test = () => ({ nome: "Marco" });
-
-console.log(test());
+console.log(soma(1));
+console.log(soma());
