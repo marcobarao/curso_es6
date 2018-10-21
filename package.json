@@ -10,10 +10,11 @@
     "@babel/preset-env": "^7.1.0",
     "babel-loader": "^8.0.4",
     "webpack": "^4.22.0",
-    "webpack-cli": "^3.1.2"
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.9"
   },
   "scripts": {
-    "dev": "webpack --mode=development -w",
+    "dev": "webpack-dev-server --mode=development",
     "desafio1": "babel ./exercicios_mod1/main.js -o ./exercicios_mod1/bundle.js -w"
   }
 }
