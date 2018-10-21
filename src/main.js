@@ -1,4 +1,4 @@
-import Usuario, { idade as idadeUsuario } from "./functions";
+import ClasseUsuario, { idade as idadeUsuario } from "./functions";
 
-Usuario.info();
+ClasseUsuario.info();
 console.log(idadeUsuario);
