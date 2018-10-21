@@ -1,17 +1,17 @@
-import axios from "axios";
+import {
+  umPorSegundo,
+  getUserFromGithub,
+  Github,
+  buscaUsuario
+} from "./async-await";
 
-class Api {
-  static async getUserInfo(username) {
-    try {
-      const response = await axios.get(
-        `https://api.github.com/users/${username}`
-      );
+umPorSegundo();
 
-      console.log(response);
-    } catch (err) {
-      console.warn(err);
-    }
-  }
-}
+getUserFromGithub("marcobarao");
+getUserFromGithub("marcoaaaabarao");
 
-Api.getUserInfo("marcobarao");
+Github.getRepositories("marcobarao/marcobarao.github.io");
+Github.getRepositories("marcobarao/dasuhdsauhdsaudhuasu");
+
+buscaUsuario("marcobarao");
+buscaUsuario("marcoaaaabarao");
